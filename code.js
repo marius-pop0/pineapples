@@ -27,7 +27,7 @@ function nChars(txt){
 
 function nWords(txt){
     var words=txt.split(/\W+/g);
-    //console.log(words);
+
     var w;
     var num=0;
     for (w in words){
@@ -78,7 +78,6 @@ function maxLineLength(txt){
     for (l in line){
         if(line[l].length>max){
             max=line[l].length;
-            //console.log(line[l]);
         }
     }
     return max;
@@ -96,9 +95,6 @@ function palindrome(txt) {
         var reverse='';
         for (var i = words[w].length - 1; i >= 0; i--)
             reverse += words[w][i];
-
-        //console.log(words[w]);
-        //console.log(reverse);
 
         if (!words[w].localeCompare(reverse))
             pal.push(words[w]);
@@ -149,7 +145,7 @@ function longestWords(txt) {
 function mostFrequentWords(txt) {
     var words=txt.toLowerCase().split(/\W+/g);
     words.sort();
-    console.log(words);
+
     var mostFeq=[];
     var uniqueWords=[];
     var uniqueWordsFreq=[];
