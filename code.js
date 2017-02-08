@@ -108,6 +108,7 @@ function palindrome(txt) {
 
 function longestWords(txt) {
     var words=txt.split(/\W+/g);
+    words.sort();
     var longest=0;
     var theLongest=[];
     var theLongestChar=[];
