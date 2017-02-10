@@ -26,7 +26,7 @@ function nChars(txt){
 }
 
 function nWords(txt){
-    var words=txt.split(/\W+/g);
+    var words=txt.split(/[^a-zA-Z0-9'-]/g);
 
     var w;
     var num=0;
@@ -59,7 +59,7 @@ function nNonEmptyLines(txt){
 }
 
 function averageWordLength(txt) {
-    var words=txt.split(/\W+/);
+    var words=txt.split(/[^a-zA-Z0-9'-]/);
     var lengths;
     var w;
     var wordAvg = 0;
@@ -84,7 +84,7 @@ function maxLineLength(txt){
 }
 
 function palindrome(txt) {
-    var words=txt.toLowerCase().split(/\W+/g);
+    var words=txt.toLowerCase().split(/[^a-zA-Z0-9'-]/g);
     var w;
     var pal=[];
     for (w in words){
@@ -103,7 +103,7 @@ function palindrome(txt) {
 }
 
 function longestWords(txt) {
-    var words=txt.toLowerCase().split(/\W+/g);
+    var words=txt.toLowerCase().split(/[^a-zA-Z0-9'-]/g);
     words.sort();
     var longest=0;
     var theLongest=[];
@@ -143,7 +143,7 @@ function longestWords(txt) {
 }
 
 function mostFrequentWords(txt) {
-    var words=txt.toLowerCase().split(/\W+/g);
+    var words=txt.toLowerCase().split(/[^a-zA-Z0-9'-]/g);
     words.sort();
 
     var mostFeq=[];
