@@ -61,13 +61,16 @@ function nNonEmptyLines(txt){
 function averageWordLength(txt) {
     var words=txt.split(/[^a-zA-Z0-9'-]/);
     var lengths;
+    var empty=0;
     var w;
     var wordAvg = 0;
     for (w in words){
-        //words[w]=words[w].replace(/\W/g,'');
-        wordAvg += words[w].length;
+        if (words[w].length===0)
+            empty+=1;
+        else
+            wordAvg += words[w].length;
     }
-    var avgLen = wordAvg / words.length;
+    var avgLen = wordAvg / (words.length-empty);
     return avgLen;
 }
 
